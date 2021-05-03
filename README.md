@@ -9,12 +9,15 @@ Current Features:
  
 
 Languages used: 
-  - HTML, CSS, Javascript 
+  - HTML, Javascript 
+
+API Used: 
+  - Bootstrap
 
 Group Members: 
-  Kevin Nguyen (Better)
-  Kevin Nguyen (Professor)
-  Ian Nguyen 
+  - Kevin Nguyen (Better)
+  - Kevin Nguyen (Professor)
+  - Ian Nguyen 
   
 Documentation will be provided soon. 
  
