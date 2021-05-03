@@ -4,14 +4,18 @@ var ScrabbleWordFinder = (() => {
     this.dict = new ScrabbleDictionary(Object.keys(ScrabbleWordList));
   };
 
+  //global vars for now to get the 2x and 3x values
+  //Globals var unncessary
   ScrabbleWordFinder.prototype.find = function(letters) {
     return validWords(this.dict.root, letters);
   };
 
 //validwords pushes words into the result array 
+//Valid words now pushes points into the result array as well. 
   var validWords = function(node, letters, word = '', results = []) {
     if (node.isWord) {
-      results.push(word);
+      score = points(word);
+      results.push('Word: ' + word + ' | ' + 'Points: ' + score);
     }
     var seen = new Set();
     for (let ch of letters) {
@@ -25,11 +29,22 @@ var ScrabbleWordFinder = (() => {
     return results;
   };
 
-
-  //Does absolutely nothing but should help maybe
+  //Calculates the points, takes in a word and if it is using point modifier
+  //Replaced the old condition with getting element by id
+  //Now multiplies by 2 or 3 or both depending on whether the checkbox is checked or not. 
   var points = function(word) {
-    return ScrabbleWordList[word];
+    let score = ScrabbleWordList[word];
+    if(isDouble.checked)
+    {
+      score *= 2;
+    }
+    if(isTriple.checked)
+    {
+      score *= 3;
+    }
+    return score;
   }
+
 
   //
   var ScrabbleDictionary = function(words) {
