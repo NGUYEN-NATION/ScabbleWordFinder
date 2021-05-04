@@ -46,7 +46,6 @@ var ScrabbleWordFinder = (() => {
   }
 
 
-  //
   var ScrabbleDictionary = function(words) {
     this.root = new ScrabbleTrieNode();
     words.forEach(word => this.insert(word));
