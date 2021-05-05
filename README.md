@@ -20,6 +20,4 @@ Group Members:
   - Kevin Nguyen (Better)
   - Kevin Nguyen (Professor)
   - Ian Nguyen 
-  
-Documentation will be provided soon. 
  
