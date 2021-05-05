@@ -2,6 +2,8 @@
 
 A scrabble word for those wanna cheat in scrabble (shame on you) 
 
+License used: GNU general license Version 3
+
 
 Current Features: 
   - Returns the valid words with the base points associated with it 
