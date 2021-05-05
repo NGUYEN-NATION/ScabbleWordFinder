@@ -10,9 +10,11 @@ var ScrabbleWordFinder = (() => {
     return validWords(this.dict.root, letters);
   };
 
-//validwords pushes words into the result array 
-//Valid words now pushes points into the result array as well. 
+//validwords pushes words into the result array
+//Valid words now pushes points into the result array as well.
   var validWords = function(node, letters, word = '', results = []) {
+    //If it is a word, call the points function and then YEET IT INTO RESULTS
+    //Added word | points for QUALITY OF LIFE BECAUSE QUALITY OF LIFE IS A THING
     if (node.isWord) {
       score = points(word);
       results.push('Word: ' + word + ' | ' + 'Points: ' + score);
@@ -31,7 +33,7 @@ var ScrabbleWordFinder = (() => {
 
   //Calculates the points, takes in a word and if it is using point modifier
   //Replaced the old condition with getting element by id
-  //Now multiplies by 2 or 3 or both depending on whether the checkbox is checked or not. 
+  //Now multiplies by 2 or 3 or both depending on whether the checkbox is checked or not.
   var points = function(word) {
     let score = ScrabbleWordList[word];
     if(isDouble.checked)
@@ -68,5 +70,3 @@ var ScrabbleWordFinder = (() => {
 
   return new ScrabbleWordFinder();
 })();
-
-
