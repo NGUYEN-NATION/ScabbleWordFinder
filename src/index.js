@@ -1,4 +1,3 @@
-//get html elements by their ID in code.
 var letterInput = document.getElementById('letters');
 var isDouble = document.getElementById("double"); //2x button
 var isTriple = document.getElementById('triple'); //3x button
